@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="znamkyPane" prefHeight="333.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ZnamkyController">
+   <children>
+      <Label layoutX="24.0" layoutY="23.0" prefHeight="17.0" prefWidth="29.0" text="Žiak: " />
+      <Label fx:id="lblZiak" layoutX="64.0" layoutY="23.0" prefHeight="17.0" prefWidth="218.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHodnota" layoutX="21.0" layoutY="51.0" prefHeight="25.0" prefWidth="72.0" promptText="známka" />
+      <TextField fx:id="txtVaha" layoutX="108.0" layoutY="51.0" prefHeight="25.0" prefWidth="72.0" promptText="váha" />
+      <Button fx:id="btnAddZnamka" layoutX="209.0" layoutY="51.0" mnemonicParsing="false" onAction="#handleAddZnamka" prefHeight="25.0" prefWidth="72.0" text="Pridať" />
+      <TableView fx:id="tblZnamky" layoutX="19.0" layoutY="86.0" prefHeight="185.0" prefWidth="263.0">
+        <columns>
+          <TableColumn fx:id="cHodnota" prefWidth="132.0" text="Známka" />
+          <TableColumn fx:id="cVaha" prefWidth="130.0" text="Váha" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnDeleteZnamka" layoutX="24.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleDeleteZnamka" text="Odstrániť" />
+      <Button fx:id="btnZavrietDialog" layoutX="218.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleZavrietDialog" text="Zavrieť" />
+   </children>
+</AnchorPane>

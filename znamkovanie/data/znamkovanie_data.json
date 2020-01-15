@@ -1,0 +1,28 @@
+{
+  "skupiny":[
+    {
+      "ziaci":[
+        {
+          "priezvisko":"Pokojná",
+          "znamky":[
+            {
+              "vaha":2.0,
+              "hodnota":1
+            },
+            {
+              "vaha":1.0,
+              "hodnota":2
+            },
+            {
+              "vaha":2.0,
+              "hodnota":2
+            }
+          ],
+          "meno":"Anièka",
+          "trieda":"2.A"
+        }
+      ],
+      "nazov":"druháci"
+    }
+  ]
+}

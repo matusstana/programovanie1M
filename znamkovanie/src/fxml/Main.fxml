@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="491.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.MainController">
+   <children>
+      <ComboBox fx:id="cmbSkupiny" layoutX="79.0" layoutY="14.0" onAction="#handleSelectSkupina" prefWidth="150.0" promptText="Skupina" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="15.0" />
+      <Button fx:id="btnDeleteSkupina" layoutX="237.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleDeleteSkupina" prefHeight="25.0" prefWidth="150.0" text="Odstrániť skupinu" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="361.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <TextField fx:id="txtSkupina" layoutX="379.0" layoutY="18.0" prefHeight="25.0" prefWidth="150.0" promptText="názov skupiny" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="15.0" />
+      <Button fx:id="btnAddSkupina" layoutX="558.0" layoutY="16.0" mnemonicParsing="false" onAction="#handleAddSkupina" prefHeight="25.0" prefWidth="150.0" text="Pridať skupinu" AnchorPane.leftAnchor="550.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <TextField fx:id="txtPriezvisko" layoutX="20.0" layoutY="54.0" prefHeight="25.0" prefWidth="150.0" promptText="priezvisko" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="54.0" />
+      <TextField fx:id="txtMeno" layoutX="200.0" layoutY="54.0" prefHeight="25.0" prefWidth="150.0" promptText="meno" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="54.0" />
+      <TextField fx:id="txtTrieda" layoutX="375.0" layoutY="54.0" prefHeight="25.0" prefWidth="150.0" promptText="trieda" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="54.0" />
+      <Button fx:id="btnAddZiak" layoutX="550.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleAddZiak" prefHeight="25.0" prefWidth="150.0" text="Pridať žiaka" AnchorPane.leftAnchor="550.0" AnchorPane.topAnchor="54.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <TableView id="mainTable" fx:id="tblZiaci" editable="true" layoutX="14.0" layoutY="101.0" prefHeight="317.0" prefWidth="683.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="101.0">
+        <columns>
+          <TableColumn fx:id="cPriezvisko" editable="true" onEditCommit="#handlePriezviskoEdit" prefWidth="157.0" text="Priezvisko" />
+          <TableColumn fx:id="cMeno" onEditCommit="#handleMenoEdit" prefWidth="144.0" text="Meno" />
+            <TableColumn fx:id="cTrieda" onEditCommit="#handleTriedaEdit" prefWidth="72.0" text="Trieda" />
+            <TableColumn fx:id="cZnamky" editable="false" prefWidth="193.0" text="Známky" />
+            <TableColumn fx:id="cPriemer" editable="false" prefWidth="116.0" text="Priemer" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnOznamkuj" layoutX="20.0" layoutY="431.0" mnemonicParsing="false" onAction="#handleOznamkuj" prefHeight="25.0" prefWidth="180.0" text="Oznámkovať vybraného žiaka" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="512.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnDeleteZiak" layoutX="216.0" layoutY="431.0" mnemonicParsing="false" onAction="#handleDeleteZiak" prefHeight="25.0" prefWidth="150.0" text="Odstrániť vybraného žiaka" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="344.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnUlozit" layoutX="546.0" layoutY="428.0" mnemonicParsing="false" onAction="#handleUlozit" prefHeight="25.0" prefWidth="150.0" text="Uložiť" AnchorPane.bottomAnchor="33.0" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
